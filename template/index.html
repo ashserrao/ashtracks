@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+    <title>Ashtracks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'CSS\index.css ' %}">
+    <link rel="stylesheet" href="{% static 'CSS\common.css ' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<!----------------------------------------- navigation bar ------------------------------------------------------------>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="{% static 'images\logo.jpg' %}" width="50" height="50"
+                                              alt=" oops!! image couldn't be loaded"
+                                              loading="lazy"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}"><h3>Home</h3><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'about_us' %}"><h3>About Us</h3></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'contact' %}"><h3>Contact Me</h3></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'news' %}"><h3>Event News</h3></a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.instagram.com/ash_tracks/?hl=en"><img
+                            src="{% static 'images\insta64.png' %}" width="30"
+                            height="30"></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link"
+                       href="https://www.facebook.com/Electro-Digi-Music-150463045890024/?modal=admin_todo_tour"><h3>
+                        <img src="{% static 'images\facebook64.png' %}" width="30"
+                             height="30"></h3></a>
+                </li>
+                <li class="nav-item active" style=" margin-top: 10px">
+                    <form action="{% url 'register' %}" class="inline">
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><h2>Register Now!</h2>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-------------------------------------------- CENTER IMAGE ----------------------------------------------------------->
+<hr>
+<div>
+    <center>
+        <img class="logo" height="40%" width="80%" src="{% static 'images\homeBG.jpg' %}">
+    </center>
+</div>
+<hr>
+<!------------------------------------------------ MP3 FILES ---------------------------------------------------------->
+<div>
+    <center>
+        <h3 class="headstyle">MY BEST TRACKS</h3>
+    </center>
+</div>
+<div>
+    <table class="table" cellspacing="40px">
+        <tr>
+            <td><img class="album" src="{% static 'images\Screenshot (18).png ' %}"
+                     alt="oops!!! image couldn't be loaded"></td>
+            <td><h4 class="column1" style="margin-right: 20px">Softons</h4></td>
+            <td><h4 class="column2" style="margin-right: 20px">An orchestra mix</h4></td>
+            <td>
+                <form action="{% static 'videos\softons.mp4' %}" class="inline">
+                    <button class="btn btn-outline-danger" type="submit"><h2>Demo</h2>
+                    </button>
+                </form>
+            </td>
+            <td>
+                <form action="https://drive.google.com/drive/my-drive" class="inline">
+                    <button class="btn btn-warning" type="submit"><h2>Download Now</h2>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><img class="album" src="{% static 'images\Screenshot (17).png ' %}"
+                     alt="oops!!! image couldn't be loaded"></td>
+            <td><h4 class="column1">Paix</h4></td>
+            <td><h4 class="column2">EDM Mix</h4></td>
+            <td>
+                <form action="{% static 'videos\Paix.mp4' %}" class="inline">
+                    <button class="btn btn-outline-danger" type="submit"><h2>Demo</h2>
+                    </button>
+                </form>
+            </td>
+            <td>
+                <form action="https://drive.google.com/drive/my-drive" class="inline">
+                    <button class="btn btn-warning" type="submit"><h2>Download Now</h2>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><img class="album" src="{% static 'images\Screenshot (11).png ' %}"
+                     alt="oops!!! image couldn't be loaded"></td>
+            <td><h4 class="column1">AMOR</h4></td>
+            <td><h4 class="column2">EDM Mix</h4></td>
+            <td>
+                <form action="{% static 'videos\AMOR.mp4' %}" class="inline">
+                    <button class="btn btn-outline-danger" type="submit"><h2>Demo</h2>
+                    </button>
+                </form>
+            </td>
+            <td>
+                <form action="https://drive.google.com/drive/my-drive" class="inline">
+                    <button class="btn btn-warning" type="submit"><h2>Download Now</h2>
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------- MUSIC COURSES ------------------------------------------------------->
+<div>
+    <center>
+        <h3 class="headstyle">BEST COURSES FOR MUSIC</h3>
+    </center>
+</div>
+<div>
+    <table class="table" cellspacing="40px">
+        <tr>
+            <td><img src="{% static 'images\food_1.jpeg' %}"
+                     class="img-fluid" alt="oops!!! image couldn't be loaded" height="200" width="400"></td>
+            <td>
+                <p STYLE="font-size: 30px">
+                    "Hey there!!!!, I'm Martin Garrix here<br>
+                    to support the young producers."<br>
+                    <br>
+                <form action="https://youtu.be/XXzihfUZG1o?list=PLOPmDfV0hAMbZM1dnmlOAc2WqnDOv-NeE"
+                      class="inline">
+                    <button class="btn btn-outline-warning" type="submit"><h2>Access Course</h2>
+                    </button>
+                </form>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="{% static 'images\food_2.jpeg' %}"
+                     class="img-fluid" alt="oops!!! image couldn't be loaded"></td>
+            <td>
+                <p STYLE="font-size: 30px">
+                    "Hello Everybody, I'm Han Zimmer<br>
+                    the writer and produce of the famous<br>
+                    theme 'he is a pirate'-'Pirates of carrebiean ."<br>
+                    <br>
+                <form action="https://www.masterclass.com/classes/hans-zimmer-teaches-film-scoring?utm_source
+                                    =Paid&utm_medium=AdWords&utm_campaign=HZ&utm_content=Brand-{keyword}-G2_EM&utm_
+                                    term=Aq-Prospecting&gclid=CjwKCAjw5cL2BRASEiwAENqAPmPkt-RK1vKPdUS3Bg4uoQ00kQkGUqEa
+                                    To8NHa6VGeQaunK7-suZzRoCP9sQAvD_BwE"
+                      class="inline">
+                    <button class="btn btn-outline-warning" type="submit"><h2>Access Course</h2>
+                    </button>
+                </form>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="{% static 'images\food_3.jpeg' %}"
+                     class="img-fluid" alt="oops!!! image couldn't be loaded" height="200" width="400"></td>
+            <td>
+                <p STYLE="font-size: 30px">
+                    "Hey Everyone, deadmau5 here <br>
+                    a song-writer, EDM produce & DJ <br>
+                    i'm here with a few master classes to help <br>
+                    the young producers."<br>
+                    <br>
+                <form action="https://www.masterclass.com/classes/deadmau5-teaches-electronic-music-production"
+                      class="inline">
+                    <button class="btn btn-outline-warning" type="submit"><h2>Access Course</h2>
+                    </button>
+                </form>
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<!----------------------------------------------- MUSIC PLAYLIST ------------------------------------------------------>
+<div>
+    <center>
+        <h3 class="headstyle">OUR BEST MUSIC PLAYLIST</h3>
+    </center>
+</div>
+<center>
+    <table style=" margin-top: 20px; margin-left: 20px; margin-bottom: 20px;">
+        <tr>
+            <td class="pad"><a href="#"><img src="{% static 'images\EDMplaylist.jpg' %}"></a></td>
+            <td class="pad"><a href="#"><img src="{% static 'images\melodypplaylist.jpeg' %}"></a></td>
+            <td class="pad"><a href="#"><img src="{% static 'images\popplaylist.jpg' %}" height="300" width="300"></pythona>
+            </td>
+            <td class="pad"><a href="#"><img src="{% static 'images\trapplaylist.jpg' %}" height="300" width="300"></a>
+            </td>
+        </tr>
+    </table>
+</center>
+<!--------------------------------------------------- VST MENU -------------------------------------------------------->
+<div>
+    <center>
+        <h3 class="headstyle">OUR BEST PICKS OF VST's</h3>
+    </center>
+</div>
+<table class="table" style=" margin-top: 20px; margin-left: 20px; margin-bottom: 20px;">
+    <thead>
+    <td>
+        <h3>SOUND GENERATORS</h3>
+    </td>
+    </thead>
+    <tr>
+        <td class="pad"><a href="https://www.native-instruments.com/en/products/komplete/samplers/kontakt-6/whats-new/">
+            <img src="{% static 'images\kontakt6.png' %}" height="300" width="350"></a><br>
+            <h4>Kontakt 6</h4></td>
+        <td class="pad"><a href="https://refx.com/nexus/"><img src="{% static 'images\nexus.jpg' %}"></a><br>
+            <h4>Nexus</h4></td>
+    </tr>
+    <tr>
+        <td class="pad"><a href="https://www.spectrasonics.net/products/omnisphere/">
+            <img src="{% static 'images\ominisphere.jpg' %}" height="300" width="450"></a><br>
+            <h4>Omnisphere 2</h4></td>
+        <td class="pad"><a href="https://www.lennardigital.com/sylenth1/">
+            <img src="{% static 'images\sylenth1.jpg' %}" height="300" width="450"></a><br>
+            <h4>Sylenth 1</h4></td>
+    </tr>
+    <thead>
+    <td>
+        <h3>FILTERS</h3>
+    </td>
+    </thead>
+    <tr>
+        <td class="pad"><a href="https://www.izotope.com/en/products.html">
+            <img src="{% static 'images\ozone.png' %}" height="300" width="300"></a><br>
+            <h4>Ozone 6</h4></td>
+        <td class="pad"><a href="https://www.waves.com/specials?gclid=CjwKCAjw5cL2BRASEiwAENqAPp93JzW3rNJGxx8crnzBmBtKv
+            -egF3wr8RCmLDY_4Odakf00fcUjcBoCR8gQAvD_BwE#sort:path~type~order=.default-order~number~asc|views:view=grid-
+            view|paging:currentPage=0|paging:number=20"><img src="{% static 'images\wavesbundle.jpg' %}"
+                                                             height="300" width="300"></a><br>
+            <h4>Waves Bundle</h4></td>
+    </tr>
+</table>
+<!-------------------------------------------------- FOOTER BAR ------------------------------------------------------->
+<div class="card-footer bg-transparent border-success">
+    <center>
+        <p style=" color: red ">
+            copyrights is set for this page by AshTracks.Rcds
+        </p>
+    </center>
+</div>
+</body>
+</html>
